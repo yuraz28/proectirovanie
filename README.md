@@ -34,10 +34,6 @@ make run
 
 Параметры подключения задаются переменными `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASSWORD` (см. [.env.example](.env.example)). Приложение на хосте подключается к `localhost:5432`.
 
-### Postgres не стартует: `No space left on device`
-
-Сообщение `initdb: ... No space left on device` значит, что **закончилось место** на диске образа Docker или на диске Mac. См. `docker system df`, `docker system prune -a --volumes`, настройки **Disk image size** в Docker Desktop, затем `docker compose down -v && docker compose up -d --wait postgres`.
-
 ## Миграции (Alembic)
 
 Схема БД задаётся миграциями в [migrations/versions/](migrations/versions/), конфигурация — [alembic.ini](alembic.ini) и [migrations/env.py](migrations/env.py) (async, тот же DSN, что у приложения).
