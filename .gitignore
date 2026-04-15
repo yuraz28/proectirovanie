@@ -1,0 +1,17 @@
+.*
+**/__pycache__
+*.pyc
+*.egg-info
+!.gitlab
+!.dockerignore
+!.gitignore
+!.gitlab-ci.yml
+!.pre-commit-config.yaml
+!.env.example
+!.python-version
+
+# Игнорируем только rules, за исключением memory-bank.mdc
+!.cursor/
+.cursor/rules/
+.cursor/skills/
+!.cursor/rules/memory-bank.mdc
